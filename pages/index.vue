@@ -1,65 +1,36 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">charlie-levine-dot-dev</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <GitHub />
+    <b-row>
+      <b-col cols="2">
+        <Photo />
+      </b-col>
+      <b-col cols="10">
+        <Logo />
+      </b-col>
+      <b-col cols="12">
+        <BuyMeACoffee />
+      </b-col>
+      <b-col cols="12">
+        <Subtitle />
+      </b-col>
+      <b-col cols="12">
+        <LineBreak />
+      </b-col>
+      <b-col cols="12">
+        <ImageLink
+          name="Medium"
+          href="https://charliechamp616.medium.com"
+          :img="require('~/assets/medium.png')"
+        />
+      </b-col>
+      <b-col cols="12">
+        <ImageLink
+          name="Lazy Texts"
+          href="https://lazytexts.com"
+          :img="require('~/assets/lazytexts.png')"
+        />
+      </b-col>
+    </b-row>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
